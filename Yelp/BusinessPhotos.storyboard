@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Business Photos View Controller-->
+        <scene sceneID="FxO-mx-87r">
+            <objects>
+                <viewController id="ODD-Hj-j0S" customClass="BusinessPhotosViewController" customModule="Yelp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xew-yn-cPP"/>
+                        <viewControllerLayoutGuide type="bottom" id="YGl-zw-bho"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="09s-8o-vhO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IqZ-ea-hWd">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IqZ-ea-hWd" secondAttribute="trailing" id="E2b-Mc-ObN"/>
+                            <constraint firstItem="IqZ-ea-hWd" firstAttribute="leading" secondItem="09s-8o-vhO" secondAttribute="leading" id="cHd-Tj-aLk"/>
+                            <constraint firstItem="YGl-zw-bho" firstAttribute="top" secondItem="IqZ-ea-hWd" secondAttribute="bottom" id="mxf-zW-mQ0"/>
+                            <constraint firstItem="IqZ-ea-hWd" firstAttribute="top" secondItem="xew-yn-cPP" secondAttribute="bottom" id="vmm-IB-lUe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dK0-Mw-bRo">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="PMz-dd-0f1">
+                            <connections>
+                                <action selector="didTapCloseButton:" destination="ODD-Hj-j0S" id="l7Q-3S-RFg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="IqZ-ea-hWd" id="Qeo-48-mQ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lnc-fb-zbi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="482"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MgL-hs-cyS">
+            <objects>
+                <navigationController storyboardIdentifier="BusinessPhotosNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="49C-Yu-4N4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NOp-iw-Hgm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ODD-Hj-j0S" kind="relationship" relationship="rootViewController" id="Bxf-EO-wur"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tcs-j4-HzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="482"/>
+        </scene>
+    </scenes>
+</document>
